@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { ImageBackground, StyleSheet, Text, View } from 'react-native';
+import {imageBackground} from "./constants/FilePaths";
+import {CustomButton} from "./components/CustomButton";
 
-const imageBackground =require("./Images/backgound_blue.jpg");
 
 export default function App() {
   return (
@@ -10,6 +11,9 @@ export default function App() {
         <View style={styles.container}>
             <Text>Testing background</Text>
             <StatusBar style="auto" />
+            <CustomButton unfilled title={'Test button 1'} onPress={() => {setVisible(true)}}/>
+            <CustomButton unfilled title={'Test button 2'} onPress={() => {setVisible(true)}}/>
+            <CustomButton unfilled title={'Test button 3'} onPress={() => {setVisible(true)}}/>
         </View>
     </ImageBackground>
   );
