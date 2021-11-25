@@ -9,20 +9,24 @@ export const CustomButton = ({unfilled, onPress, title}) => {
         style={styles.container}
         onPress={onPress}
         >
-        <Text style={styles.text}>{title}</Text>
+        <Text style={styles.textButton}>{title}</Text>
     </TouchableOpacity>
     }
 
 const filledStyle = StyleSheet.create({
     container: {
         alignItems: "center",
-        backgroundColor: Color.bostonBlue,
+        backgroundColor: Color.darkerBlue,
         borderColor: Color.royalBlue,
         borderWidth: 2,
-        borderRadius: 20,
-        padding: 10,
+        borderRadius: 30,
+        marginBottom:50,
+        paddingTop: 40,
+        paddingBottom: 40,
+        paddingLeft: 130,
+        paddingRight: 130,
     },
-    text: {
+    textButton: {
         color: Color.white,
         fontWeight: 'bold',
     }
@@ -31,14 +35,19 @@ const filledStyle = StyleSheet.create({
 const unfilledStyle = StyleSheet.create({
     container: {
         alignItems: "center",
-        backgroundColor: Color.white,
+        backgroundColor: Color.darkerBlue,
         borderColor: Color.royalBlue,
         borderWidth: 2,
-        borderRadius: 20,
-        padding: 10
+        borderRadius: 30,
+        marginBottom:50,
+        paddingTop: 40,
+        paddingBottom: 40,
+        paddingLeft: 130,
+        paddingRight: 130,
+
     },
-    text: {
-        color: Color.royalBlue,
+    textButton: {
+        color: Color.white,
         fontWeight: 'bold',
     }
 });
