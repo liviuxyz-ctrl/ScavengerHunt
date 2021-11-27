@@ -1,6 +1,7 @@
 import React from 'react'
 import {Text, TouchableOpacity, StyleSheet, Dimensions} from "react-native"
 import {Color} from '../constants/Colors.js'
+import {heightOfScreen, widthOfScreen} from "../constants/ScreenSizes";
 
 export const CustomButton = ({unfilled, onPress, title}) => {
     const styles = unfilled ? unfilledStyle : filledStyle;
@@ -36,10 +37,10 @@ const unfilledStyle = StyleSheet.create({
         alignItems: "center",
         backgroundColor: Color.darkerBlue,
         borderColor: Color.royalBlue,
-        width: Dimensions.get('screen').width - Dimensions.get('screen').width/10,
+        width: widthOfScreen - widthOfScreen/10,
         borderWidth: 2,
         borderRadius: 30,
-        marginBottom:Dimensions.get('screen').height / 10,
+        marginBottom: heightOfScreen / 10,
         paddingTop: 20,
         paddingBottom: 20,
     },
