@@ -1,5 +1,5 @@
 import React from 'react'
-import {Text, TouchableOpacity, StyleSheet, Dimensions} from "react-native"
+import {Text, TouchableOpacity, StyleSheet} from "react-native"
 import {Color} from '../constants/Colors.js'
 import {heightOfScreen, widthOfScreen} from "../constants/ScreenSizes";
 
@@ -19,12 +19,12 @@ const filledStyle = StyleSheet.create({
         alignItems: "center",
         backgroundColor: Color.darkerBlue,
         borderColor: Color.royalBlue,
-        width: Dimensions.get('screen').width - 10,
+        width: widthOfScreen - widthOfScreen/10,
         borderWidth: 2,
         borderRadius: 30,
-        marginBottom:20,
         paddingTop: 20,
         paddingBottom: 20,
+        marginBottom: heightOfScreen / 10,
     },
     textButton: {
         color: Color.white,
@@ -40,9 +40,9 @@ const unfilledStyle = StyleSheet.create({
         width: widthOfScreen - widthOfScreen/10,
         borderWidth: 2,
         borderRadius: 30,
-        marginBottom: heightOfScreen / 10,
         paddingTop: 20,
         paddingBottom: 20,
+        marginBottom: heightOfScreen / 10,
     },
     textButton: {
         color: Color.white,
