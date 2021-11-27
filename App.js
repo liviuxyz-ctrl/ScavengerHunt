@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {NavigationContainer} from "@react-navigation/native";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
-import { ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { ImageBackground, StyleSheet, View } from 'react-native';
 import {HomeScreen} from "./screens/HomeScreen";
 import {imageBackground} from "./constants/FilePaths";
 
@@ -21,7 +21,7 @@ export default function App() {
       <View style={styles.container}>
               <NavigationContainer>
                   <StatusBar hidden/>
-                  <StackNavigator style={styles.container}  />
+                  <StackNavigator/>
               </NavigationContainer>
       </View>
       </ImageBackground>
@@ -34,13 +34,14 @@ const styles = StyleSheet.create({
         resizeMode: 'cover',
         alignItems: 'center',
         justifyContent: 'center',
-        position: 'relative'
+        position: 'relative',
+        flex: 1,
     },
   container: {
-    alignItems: 'center',
     justifyContent: 'center',
-      // position: 'absolute',
+      position: 'absolute',
       elevation: 10,
+      flex: 1,
   },
     titleText :{
         color : 'white',
