@@ -1,4 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
+import {StatusBar} from 'expo-status-bar';
 import React from 'react';
 import {NavigationContainer} from "@react-navigation/native";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
@@ -10,42 +10,30 @@ const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
 
-    return <Stack.Navigator>
-                    <Stack.Screen name={'Home'} component={HomeScreen}/>
-        </Stack.Navigator>
+    return <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name={'Home'} component={HomeScreen}/>
+    </Stack.Navigator>
 }
 
 export default function App() {
-  return ( <ImageBackground source={imageBackground} style={styles.image}>
-      <View style={styles.view}>
-              <NavigationContainer>
-                  <StatusBar hidden/>
-                  <StackNavigator/>
-              </NavigationContainer>
-      </View>
-      </ImageBackground>
-
-  );
+    return (<ImageBackground source={imageBackground} style={styles.backgroundImage}>
+            <View style={styles.view}>
+                <NavigationContainer>
+                    <StatusBar hidden/>
+                    <StackNavigator/>
+                </NavigationContainer>
+            </View>
+        </ImageBackground>
+    );
 }
 
 export const styles = StyleSheet.create({
-    image:{
+    backgroundImage: {
         resizeMode: 'cover',
         alignItems: 'center',
         justifyContent: 'center',
         position: 'relative',
         flex: 1,
-    },
-  container: {
-    justifyContent: 'center',
-      position: 'absolute',
-      elevation: 10,
-      flex: 1,
-  },
-    titleText :{
-        color : 'white',
-        fontSize: 25,
-        paddingBottom: 100,
     },
     view: {
         flex: 1,
@@ -57,12 +45,3 @@ export const styles = StyleSheet.create({
 
 });
 
-
-// <ImageBackground source={imageBackground} style={styles.image}>
-//     <View style={styles.container}>
-//         <Text style={styles.titleText}>Testing background</Text>
-//         <StatusBar style="auto" />
-//         <CustomButton unfilled title={'Test button 1'} onPress={() => {}}/>
-//         <CustomButton unfilled title={'Test button 2'} onPress={() => {}}/>
-//     </View>
-// </ImageBackground>
