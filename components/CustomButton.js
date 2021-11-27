@@ -1,5 +1,5 @@
 import React from 'react'
-import {Text, TouchableOpacity, StyleSheet} from "react-native"
+import {Text, TouchableOpacity, StyleSheet, Dimensions} from "react-native"
 import {Color} from '../constants/Colors.js'
 
 export const CustomButton = ({unfilled, onPress, title}) => {
@@ -14,22 +14,22 @@ export const CustomButton = ({unfilled, onPress, title}) => {
     }
 
 const filledStyle = StyleSheet.create({
-    container: {
-        alignItems: "center",
-        backgroundColor: Color.darkerBlue,
-        borderColor: Color.royalBlue,
-        borderWidth: 2,
-        borderRadius: 30,
-        marginBottom:50,
-        paddingTop: 40,
-        paddingBottom: 40,
-        paddingLeft: 130,
-        paddingRight: 130,
-    },
-    textButton: {
-        color: Color.white,
-        fontWeight: 'bold',
-    }
+    // container: {
+    //     justifyContent: "center",
+    //     alignItems: "center",
+    //     backgroundColor: Color.darkerBlue,
+    //     borderColor: Color.royalBlue,
+    //     borderWidth: 2,
+    //     borderRadius: 30,
+    //     marginBottom:50,
+    //     paddingTop: 40,
+    //     paddingBottom: 40,
+    //
+    // },
+    // textButton: {
+    //     color: Color.white,
+    //     fontWeight: 'bold',
+    // }
 });
 
 const unfilledStyle = StyleSheet.create({
@@ -37,13 +37,13 @@ const unfilledStyle = StyleSheet.create({
         alignItems: "center",
         backgroundColor: Color.darkerBlue,
         borderColor: Color.royalBlue,
+        width: Dimensions.get('screen').width - 10,
         borderWidth: 2,
         borderRadius: 30,
-        marginBottom:50,
-        paddingTop: 40,
-        paddingBottom: 40,
-        paddingLeft: 130,
-        paddingRight: 130,
+        marginBottom:20,
+        paddingTop: 20,
+        paddingBottom: 20,
+
 
     },
     textButton: {
