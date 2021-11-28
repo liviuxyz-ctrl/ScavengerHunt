@@ -16,14 +16,12 @@ const StackNavigator = () => {
 }
 
 export default function App() {
-    return (<ImageBackground source={imageBackground} style={styles.backgroundImage}>
-            <View style={styles.view}>
+    return (
                 <NavigationContainer>
                     <StatusBar hidden/>
                     <StackNavigator/>
                 </NavigationContainer>
-            </View>
-        </ImageBackground>
+
     );
 }
 
@@ -32,7 +30,6 @@ export const styles = StyleSheet.create({
         resizeMode: 'cover',
         alignItems: 'center',
         justifyContent: 'center',
-        position: 'relative',
         flex: 1,
     },
     view: {
