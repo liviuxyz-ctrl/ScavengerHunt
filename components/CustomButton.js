@@ -3,8 +3,8 @@ import {Text, TouchableOpacity, StyleSheet} from "react-native"
 import {Color} from '../constants/Colors.js'
 import {heightOfScreen, widthOfScreen} from "../constants/ScreenSizes";
 
-export const CustomButton = ({unfilled, onPress, title}) => {
-    const styles = unfilled ? unfilledStyle : filledStyle;
+export const CustomButton = ({onPress, title}) => {
+    const styles = touchableStyle;
 
     return <TouchableOpacity
         style={styles.container}
@@ -14,12 +14,12 @@ export const CustomButton = ({unfilled, onPress, title}) => {
     </TouchableOpacity>
     }
 
-const filledStyle = StyleSheet.create({
+const touchableStyle = StyleSheet.create({
     container: {
-        alignItems: "center",
         backgroundColor: Color.darkerBlue,
         borderColor: Color.royalBlue,
-        width: widthOfScreen - widthOfScreen/10,
+        alignItems: "center",
+        width: widthOfScreen - widthOfScreen/15,
         borderWidth: 2,
         borderRadius: 30,
         paddingTop: 20,
@@ -32,23 +32,6 @@ const filledStyle = StyleSheet.create({
     }
 });
 
-const unfilledStyle = StyleSheet.create({
-    container: {
-        alignItems: "center",
-        backgroundColor: Color.darkerBlue,
-        borderColor: Color.royalBlue,
-        width: widthOfScreen - widthOfScreen/10,
-        borderWidth: 2,
-        borderRadius: 30,
-        paddingTop: 20,
-        paddingBottom: 20,
-        marginBottom: heightOfScreen / 10,
-    },
-    textButton: {
-        color: Color.white,
-        fontWeight: 'bold',
-    }
-});
 
 
 
