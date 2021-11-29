@@ -1,7 +1,6 @@
 import React from 'react'
 import {Text, TouchableOpacity, StyleSheet} from "react-native"
 import {Color} from '../constants/Colors.js'
-import {heightOfScreen, widthOfScreen} from "../constants/ScreenSizes";
 
 export const CustomButton = ({onPress, title}) => {
     const styles = touchableStyle;

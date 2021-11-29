@@ -1,10 +1,10 @@
 import React from 'react';
-import {ImageBackground, StyleSheet, View} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {NavigationContainer} from "@react-navigation/native";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import {StatusBar} from 'expo-status-bar';
 import {HomeScreen} from "./screens/HomeScreen";
-import {imageBackground} from "./constants/FilePaths";
+
 
 const Stack = createNativeStackNavigator();
 
@@ -36,9 +36,6 @@ export const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: 'center',
-
     }
-
-
 });
 
