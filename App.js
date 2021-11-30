@@ -4,6 +4,8 @@ import {NavigationContainer} from "@react-navigation/native";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import {StatusBar} from 'expo-status-bar';
 import {HomeScreen} from "./screens/HomeScreen";
+import {QRScannerScreen} from "./screens/QRScannerScreen";
+import {SponsorsScreen} from "./screens/SponsorsScreen";
 
 
 const Stack = createNativeStackNavigator();
@@ -12,6 +14,8 @@ const StackNavigator = () => {
 
     return <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name={'Home'} component={HomeScreen}/>
+        <Stack.Screen name={'QRScannerScreen'} component={QRScannerScreen}/>
+        <Stack.Screen name={'SponsorsScreen'} component={SponsorsScreen}/>
     </Stack.Navigator>
 }
 

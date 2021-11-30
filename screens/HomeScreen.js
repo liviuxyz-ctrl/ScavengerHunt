@@ -2,11 +2,14 @@ import React from 'react';
 import {StyleSheet, ImageBackground} from "react-native";
 import {CustomButton} from "../components/CustomButton";
 import {imageBackground} from "../constants/FilePaths";
+import {QRScannerScreen} from "./QRScannerScreen";
+import {SponsorsScreen} from "./SponsorsScreen";
 
-export const HomeScreen= ({navigation}) =>{
+
+export const HomeScreen = ({navigation}) =>{
     return <ImageBackground source={imageBackground} style={stylesHome.backgroundImage}>
-        <CustomButton  title={'Scan_QR_code'} onPress={() => navigation.navigate('QRScannerScreen')}/>
-        <CustomButton  title={'Sponsors'} onPress={() => navigation.navigate('SponsorsScreen')}/>
+        <CustomButton  title={'Scan QR code'} onPress={() => navigation.navigate(QRScannerScreen)}/>
+        <CustomButton  title={'Sponsors'} onPress={() => navigation.navigate(SponsorsScreen)}/>
     </ImageBackground>
 
 }
